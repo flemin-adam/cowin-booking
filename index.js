@@ -10,6 +10,11 @@ const currentDate = moment().format('DD-MM-YYYY');
 const availableDate = moment().add(1, 'days').format('DD-MM-YYYY');
 const SPLIT = "###"
 const MATCH_CRITERIA = availableDate + SPLIT + process.env.MIN_AGE + SPLIT + process.env.VACCINE;
+const Pincodes = {};
+const pinarr = process.env.PIN_CODE.split(",");
+pinarr.forEach(function(item){
+    Pincodes[item] = true;
+})
 
 async function wait(ms) {
     return new Promise(resolve => {
@@ -202,7 +207,6 @@ async function checkVaccinationAvailability(appointmentId, token){
     try{
         const response = await axios.get(centersURL, { headers: headers} );
         const AvailableCenters = response.data["centers"];
-        const Pincodes = JSON.parse(process.env.PIN_CODE);
         const isPresent = center => Pincodes[center["pincode"]] || false;
         const filteredCenters = R.filter(isPresent, AvailableCenters);
         console.log(filteredCenters);
