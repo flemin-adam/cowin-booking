@@ -1,10 +1,14 @@
 # cowin-booking
 
-## You'll require Node js installed on your machine to run this
+## You'll require Node js installed on your machine to run this.
+
+Download and install latest nodejs from [here](https://nodejs.org/en/download/)
 
 After cloning this project, run the following command:
 
-### npm install
+```
+npm install
+```
 
 rename .env.example to .env and populate the values like this
 
@@ -19,6 +23,8 @@ DOSE=1 // indicates 1st dose or put 2 for 2nd dose
 
 ## Run the app
 
-### npm start
+```
+npm start
+```
 
 It will ask for the details, enter the details as required and the app will run till it books an appointment
