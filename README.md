@@ -1,4 +1,5 @@
 # cowin-booking
+Command line tool to book vaccination appointments in order to bypass the terrible UX provided by the cowin website. 
 
 ## You'll require Node js installed on your machine to run this.
 
