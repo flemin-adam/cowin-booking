@@ -85,7 +85,6 @@ async function main(){
         do{
             try{
                 const token = await executeAuth();
-                //const token = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJ1c2VyX25hbWUiOiJmZmIwNmVlNC1kZjY3LTRlZDUtYWZmOS03MTgwMjZkZDA1MjYiLCJ1c2VyX2lkIjoiZmZiMDZlZTQtZGY2Ny00ZWQ1LWFmZjktNzE4MDI2ZGQwNTI2IiwidXNlcl90eXBlIjoiQkVORUZJQ0lBUlkiLCJtb2JpbGVfbnVtYmVyIjo4MDA3ODYxOTg2LCJiZW5lZmljaWFyeV9yZWZlcmVuY2VfaWQiOjc1NzI1MTk2NjM3MzEwLCJzZWNyZXRfa2V5IjoiYjVjYWIxNjctNzk3Ny00ZGYxLTgwMjctYTYzYWExNDRmMDRlIiwic291cmNlIjoiY293aW4iLCJ1YSI6Ik1vemlsbGEvNS4wIChXaW5kb3dzIE5UIDEwLjA7IFdpbjY0OyB4NjQpIEFwcGxlV2ViS2l0LzUzNy4zNiAoS0hUTUwsIGxpa2UgR2Vja28pIENocm9tZS85MS4wLjQ0NzIuMTA2IFNhZmFyaS81MzcuMzYiLCJkYXRlX21vZGlmaWVkIjoiMjAyMS0wNi0yMFQxMDoxMDozMS43NjRaIiwiaWF0IjoxNjI0MTgzODMxLCJleHAiOjE2MjQxODQ3MzF9.MBz1TVRhH93i8C3wW8y6qY72KLMav7K0DoSgBi91AGg";
                 const member = await getMember(token);
                 console.log(member);
                 const appointmentId = R.last(member["appointments"]);
